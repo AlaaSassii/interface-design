@@ -1,38 +1,432 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+*{
+  padding:0 ;
+  margin: 0 ; 
+  box-sizing: border-box;
+  font-family: 'Archivo Black', sans-serif;
+  
+}
+
+.body{
+  background-color: #efefef;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.sign {
+  position: fixed;
+  width: 100%;
+  height: 100vh; 
+  top:0 ; 
+  left: 0;
+  background:rgba(255,255,255,0.7);
+  filter: blur(18px);
+  z-index: 10;
+}
+.center{
+  background-color: red;
+  z-index: 11;
+  filter: blur(0px);
+  
+}
+.buttons{
+  position: absolute;
+  top: 10px ; 
+  right: 40px ; 
+}
+.buttons button { 
+  width: 130px;
+  height: 35px;
+  margin : 0 10px ;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+.buttons .button2{
+  background-color: rgb(43, 43, 43);
+  color:white ; 
+}
+.section1{
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  padding: 100px;
+  background-color: white ;
+
+}
+.section1 .one {
+  width: 40%;
+  margin-left: 10px;
+  
+}
+.section1 .one h1 { 
+  margin : 20px 0 10px  ;
+  font-weight: 3500;
+  font-size:44px ; 
+
+}
+.section1 .one h1 span {
+  display: block;
+  background: -webkit-linear-gradient( right, #5639ff,#ef233c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section1 .one p {
+  font-size: 18px;
+  font-weight: 100;
+}
+.section1 .image {
+  position: absolute;
+  width: 50%;
+  top:60px ; 
+  right:0px ;  
+}
+
+.section1 .image img{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* section 2 */
+.section2 { 
+  margin-top:30px ; 
+  background-color: #efefef;
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section2 h5{
+  margin-top: 80px;
+  font-size: 20px;
+}
+.section2  .div {
+  margin-top:10px; 
+  background-color: white;
+  width: 60%;
+  height: 250px ;
+  padding:20px ; 
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+}
+.section2 .div .div1{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.section2 .div .div1 div {
+  height: 20%;
+}
+.section2 .div2 {
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.section3{
+  align-items: center;
+  display: flex;
+  height: 130vh;
+  padding-top: 41px;
+  background-color: white;
+  padding-bottom: 70px;
+}
+.section3 .one{
+  flex-basis: 35%; 
+  padding: 40px 80px;
+}
+.section3 .one h1 {
+  padding: 30px 0 ;
+  font-size: 60px;
+}
+.section3 .one h3{
+  font-size: 25px ; 
+  padding: 40px 0 ; 
+  position: relative;
+  width: auto;
+
+}
+.section3 .one p{
+  padding: 15px;
+}
+.section3 .heading3::after {
+  content: "Coming Soon!";
+  position: absolute;
+  font-size: 12px;
+  width: 100px;
+  height: 12px;
+  background-color: rgb(0, 255, 136);
+  border-radius: 5%;
+  top: 10px  ; 
+  right: 30px ; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-35deg);
+  border-radius: 25px;
+  padding:5px ; 
+
+}
+.section3 .three::after{
+  top: 10px  ; 
+  right: 45% ;
+}
+
+.section3 .two {
+  margin-left: 100px;
+  flex-basis: 50%;
+}
+.section3 .two img { 
+  width: 100%;
+  height: 100%;
+
+}
+
+.section4{
+  background-color: #efefef;
+  margin: 0 ; 
+}
+.section4 .shewesh div {
+  padding:0 20px; 
+}
+.section4 .shewesh div h1 , .section4 .shewesh div p {
+  padding:10px 0 
+}
+.section4 .shewesh div h1 { 
+  font-size: 30px ;
+}
+.section4 .shewesh{
+  display: flex;
+  width: 60%;
+  margin:20px auto  ; 
+  align-items: center;
+}
+
+.section5{
+  margin: 0 ; 
+  height: 75vh;
+  background-color: #efefef;
+  position: relative;
+}
+.black{
+  width: 80%;
+  height: 90%;
+  padding: 30px 40px;
+  background-color:rgb(13, 13, 13) ;
+  color : white ;
+  margin: 20px auto ;
+  display: flex;
+  position: absolute;
+  top: 50% ; 
+  left : 50% ; 
+  transform: translate(-50%,-55%);
+  border-radius: 30px ;
+}
+.black .one { 
+  flex-basis: 30%;
+  padding: 30px ; 
+  border-radius: 20px;
+  margin : 0 10px ; 
+  /* background-color: #5639ff; */
+  background: linear-gradient(to right , #3a17ff ,#8052ff )
+}
+.black .one h1 { 
+  font-size: 40px ;
+  padding:10px ; 
+  
+}
+.black .one h3 { 
+  font-size: 25px ;
+  padding:10px ; 
+  
+}
+.black .one h6 { 
+  font-size: 20px ;
+  padding:10px ; 
+  
+}
+.black .two { 
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.two-one{
+  display: flex;
+}
+.two-one .uno {
+  flex-basis: 45%;
+  margin:0 10px 0 ;
+  background:linear-gradient(to right,rgb(0, 217, 255) ,rgb(0, 238, 254) ); 
+  height: 270px;
+  padding : 30px   ;
+  border-radius: 10px; 
+  padding-bottom: 30px;
+}
+.two-one .uno p {
+  font-size: 30px ;
+}
+.two-one .uno li {
+  font-size: 12px;
+  padding: 2px 0;
+}
+.two-one .uno button { 
+  cursor: pointer;
+  margin : 5px auto ;
+  margin-left:65px ; 
+  padding: 8px 5px; 
+  border-radius: 20px;
+  border : none ; 
+  color: white ; 
+  background: linear-gradient(to right ,rgb(255, 0, 111) ,rgb(255, 0, 166));  
+  /* rgb(0, 255, 136) */
+  background:  rgb(0, 255, 136)  ;
+  background:  white ; 
+  color: deepskyblue;
+
+}
+
+.two-one .dos { 
+  flex-basis: 55%;
+  margin:0 10px 0 ;
+  background:linear-gradient(to right,rgb(255, 208, 1),rgb(253, 255, 124) ); 
+  height: 270px;
+  padding : 30px   ;
+  border-radius: 10px; 
+  padding-bottom: 30px;
+}
+.two-one .dos p {
+  font-size: 30px ;
+}
+.two-one .dos li {
+  font-size: 12px;
+  padding: 2px 0;
+}
+.two-one .dos h1 { 
+  margin : 0 ; 
+  padding:0 ; 
+}
+.two-one .dos button { 
+  cursor: pointer;
+  margin : 5px auto ;
+  margin-left:65px ; 
+  padding: 8px 5px; 
+  border-radius: 20px;
+  border : none ; 
+  color: white ; 
+  background: linear-gradient(to right ,rgb(255, 0, 111) ,rgb(255, 0, 166));  
+  background:  rgb(0, 255, 136)  ;
+  background:  white ; 
+  color: deepskyblue;
+}
+.two .flex { 
+  display: flex;
+  margin-top : 20px ; 
+}
+.two .flex .tres { 
+  flex-basis: 55%;
+  margin:0 10px 0 ;
+  background:linear-gradient(to right,rgb(52, 255, 1),rgb(162, 255, 0) ); 
+  height: 270px;
+  padding : 30px   ;
+  border-radius: 10px; 
+  padding-bottom: 30px;
+}
+.tres p {
+  font-size: 30px ;
+}
+.tres li {
+  font-size: 12px;
+  padding: 2px 0;
+}
+.tres h1 { 
+  margin : 0 ; 
+  padding:0 ; 
+}
+.tres button { 
+  cursor: pointer;
+  margin : 5px auto ;
+  margin-left:65px ; 
+  padding: 8px 5px; 
+  border-radius: 20px;
+  border : none ; 
+  color: white ; 
+  background: linear-gradient(to right ,rgb(255, 0, 111) ,rgb(255, 0, 166));  
+  background:  rgb(0, 255, 136)  ;
+  background:  white ; 
+  color: deepskyblue;
+}
+.quatro{
+  flex-basis: 45%;
+  margin:0 10px 0 ;
+  background:linear-gradient(to right,rgb(255, 79, 79),rgb(255, 0, 111)  ); 
+  height: 270px;
+  padding : 30px   ;
+  border-radius: 10px; 
+  padding-bottom: 30px;
+}
+
+.quatro p {
+  font-size: 30px ;
+}
+.quatro li {
+  font-size: 12px;
+  padding: 2px 0;
+}
+.quatro h1 { 
+  margin : 0 ; 
+  padding:0 ; 
+}
+.quatro button { 
+  cursor: pointer;
+  margin : 5px auto ;
+  margin-left:65px ; 
+  padding: 8px 5px; 
+  border-radius: 20px;
+  border : none ; 
+  color: deepskyblue ; 
+  background: linear-gradient(to right ,rgb(255, 0, 111) ,rgb(255, 0, 166));  
+  background:  white
+}
+.section6 { 
+  background-color: white ;
+}
+.section6 nav { 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.section6 {
+  padding: 20px ;
+}
+.section6 nav ul { 
+  list-style: none ;
+  display: flex;
+}
+.section6 nav ul li  { 
+  padding : 10px ;
+  cursor: pointer;
+}
+.section6 nav .image { 
+  width: 100px ;
+  cursor: pointer;
+}
+.section6 nav .image img {
+  width: 100%; 
+}
+.bye { 
+  width: 60%;
+  margin : 20px auto ; 
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.two-one .uno button , .two-one .dos button,  .tres button ,  .quatro button {
+  padding: 5px 10px;
 }
